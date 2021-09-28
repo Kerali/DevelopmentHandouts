@@ -64,6 +64,14 @@ bool App::Awake()
 
 	// L01: TODO 3: Load config from XML
 
+	pugi::xml_document configFile;
+	pugi::xml_node config;
+	pugi::xml_node configApp;
+
+	App::LoadConfig();
+
+	pugi::xml_parse_result document;
+
 	if(ret == true)
 	{
 		title.create(""); // L01: TODO 4: Read the title from the config file

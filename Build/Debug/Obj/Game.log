@@ -1,11 +1,1 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  App.cpp
-  Audio.cpp
-  Input.cpp
-  Main.cpp
-  Render.cpp
-  Scene.cpp
-  Textures.cpp
-  Window.cpp
-  Generating Code...
-  Game.vcxproj -> C:\Users\pomed\Documents\Clases\Desarrollo de Videojuegos\289043_Class03_L02_Load_Save\289044_L02_Load_Save.Handout\Build\Debug\Game.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets(67,5): error MSB8020: No se pueden encontrar las herramientas de compilación para v142 (Conjunto de herramientas de la plataforma = 'v142'). Para compilar con las herramientas de compilación v142, instale las herramientas de compilación v142. También puede actualizar a las herramientas actuales de Visual Studio. Para ello, seleccione el menú Proyecto o haga clic con el botón secundario en la solución y, a continuación, seleccione "Actualizar solución".
