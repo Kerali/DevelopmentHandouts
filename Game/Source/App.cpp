@@ -68,14 +68,23 @@ bool App::Awake()
 	pugi::xml_node config;
 	pugi::xml_node configApp;
 
-	App::LoadConfig();
+	config = LoadConfig(configFile);
 
 	pugi::xml_parse_result document;
 
+	if (config.empty() == false)
+	{
+		ret = true;
+		configApp = config.child("app");
+
+		title.create(configApp.child("title").child_value()); 
+		organization.create(configApp.child("organization").child_value());       // L01: TODO 4: Read the title from the config file
+		win->SetTitle(title.GetString());
+	}
+
 	if(ret == true)
 	{
-		title.create(""); // L01: TODO 4: Read the title from the config file
-		win->SetTitle(title.GetString());
+		
 
 		ListItem<Module*>* item;
 		item = modules.start;
@@ -134,14 +143,14 @@ bool App::Update()
 }
 
 // Load config from XML file
-bool App::LoadConfig(pugi::xml_document& configFile) const
+pugi::xml_node App::LoadConfig(pugi::xml_document& configFile) const
 {
 
 	// L01: TODO 3: Load config.xml file using load_file() method from the xml_document class
 
 	// L01: TODO 3: Check result for loading errors
 
-	bool ret = false;
+	pugi::xml_node ret;
 
 	pugi::xml_parse_result result = configFile.load_file(CONFIG_FILENAME);
 

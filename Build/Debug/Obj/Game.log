@@ -3,5 +3,4 @@
   Audio.cpp
   Window.cpp
   Generando código...
-App.obj : error LNK2019: símbolo externo "private: bool __thiscall App::LoadConfig(void)" (?LoadConfig@App@@AAE_NXZ) sin resolver al que se hace referencia en la función "public: bool __thiscall App::Awake(void)" (?Awake@App@@QAE_NXZ)
-C:\Users\victorjp3\Documents\GitHub\DevelopmentHandouts\Build\Debug\Game.exe : fatal error LNK1120: 1 externos sin resolver
+  Game.vcxproj -> C:\Users\victorjp3\Documents\GitHub\DevelopmentHandouts\Build\Debug\Game.exe

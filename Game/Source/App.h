@@ -36,8 +36,6 @@ public:
 	// Called each loop iteration
 	bool Update();
 
-	bool LoadConfig(pugi::xml_document& configFile) const;
-
 	// Called before quitting
 	bool CleanUp();
 
@@ -53,7 +51,7 @@ public:
 private:
 
 	// Load config file
-	bool LoadConfig();
+	pugi::xml_node LoadConfig(pugi::xml_document&) const;
 
 	// Call modules before each loop iteration
 	void PrepareUpdate();
