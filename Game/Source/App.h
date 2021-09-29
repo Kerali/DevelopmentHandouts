@@ -36,6 +36,8 @@ public:
 	// Called each loop iteration
 	bool Update();
 
+	bool LoadConfig(pugi::xml_document& configFile) const;
+
 	// Called before quitting
 	bool CleanUp();
 

@@ -134,13 +134,23 @@ bool App::Update()
 }
 
 // Load config from XML file
-bool App::LoadConfig()
+bool App::LoadConfig(pugi::xml_document& configFile) const
 {
-	bool ret = false;
 
 	// L01: TODO 3: Load config.xml file using load_file() method from the xml_document class
 
 	// L01: TODO 3: Check result for loading errors
+
+	bool ret = false;
+
+	pugi::xml_parse_result result = configFile.load_file(CONFIG_FILENAME);
+
+	if (result == NULL)
+	{
+		LOG("Could not load xml file: %s. pugi error: %s, CONFIG_FILENAME, result.description()");
+	}
+	else ret = configFile.child("config");
+
 		
 	return ret;
 }
