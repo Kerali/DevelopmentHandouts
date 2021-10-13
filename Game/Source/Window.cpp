@@ -11,7 +11,7 @@ Window::Window() : Module()
 {
 	window = NULL;
 	screenSurface = NULL;
-	name.create("window");
+	name.Create("window");
 }
 
 // Destructor
@@ -33,17 +33,16 @@ bool Window::Awake(pugi::xml_node& config)
 	else
 	{
 		// Create window
-		// L01: TODO 6: Load all required configurations from config.xml
-		// Tip: get the name of the child and the attribute value
+		// L01: DONE 6: Load all required configurations from config.xml
 		Uint32 flags = SDL_WINDOW_SHOWN;
-		bool fullscreen = config.child("fullscreen").attribute("value").as_bool(false); // get from config
-		bool borderless = config.child("borderless").attribute("value").as_bool(false); // get from config
-		bool resizable = config.child("resizable").attribute("value").as_bool(false); // get from config
-		bool fullscreen_window = config.child("fullscreen_window").attribute("value").as_bool(false); // get from config
+		bool fullscreen = config.child("fullscreen").attribute("value").as_bool(false);
+		bool borderless = config.child("borderless").attribute("value").as_bool(false);
+		bool resizable = config.child("resizable").attribute("value").as_bool(false);
+		bool fullscreen_window = config.child("fullscreen_window").attribute("value").as_bool(false);
 
-		width = config.child("width").attribute("value").as_int(640); //get from config 
-		height = config.child("height").attribute("value").as_int(480); //get from config 
-		scale = config.child("scale").attribute("value").as_int(1); //get from config 
+		width = config.child("resolution").attribute("width").as_int(640);
+		height = config.child("resolution").attribute("height").as_int(480);
+		scale = config.child("resolution").attribute("scale").as_int(1);
 
 		if(fullscreen == true) flags |= SDL_WINDOW_FULLSCREEN;
 		if(borderless == true) flags |= SDL_WINDOW_BORDERLESS;

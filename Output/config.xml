@@ -1,8 +1,8 @@
 <!-- Config file for the game -->
-<!-- L01: TODO 1: Create configuration file-->
+<!-- L01: DONE 1: Create configuration file-->
 <config>
   <app>
-    <title>De locos funciona</title>
+    <title>SIISISISSISISISSISISISISISI</title>
     <organization>UPC</organization>
   </app>
 
@@ -17,4 +17,9 @@
     <resizable value="false"/>
     <fullscreen_window value="false"/>
   </window>
+
+  <!-- L03: Added maps folder as config option -->
+  <map>
+    <folder>Assets/maps/</folder>
+  </map>
 </config>

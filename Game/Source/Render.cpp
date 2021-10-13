@@ -9,7 +9,7 @@
 
 Render::Render() : Module()
 {
-	name.create("renderer");
+	name.Create("renderer");
 	background.r = 0;
 	background.g = 0;
 	background.b = 0;
@@ -85,6 +85,24 @@ bool Render::CleanUp()
 {
 	LOG("Destroying SDL render");
 	SDL_DestroyRenderer(renderer);
+	return true;
+}
+
+// L02: TODO 6: Implement a method to load the state, for now load camera's x and y
+// Load Game State
+bool Render::LoadState(pugi::xml_node& data)
+{
+	//...
+
+	return true;
+}
+
+// L02: TODO 8: Create a method to save the state of the renderer
+// Save Game State
+bool Render::SaveState(pugi::xml_node& data) const
+{
+	//...
+
 	return true;
 }
 
